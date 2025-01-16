@@ -1,12 +1,14 @@
 //Dette er Dalai Solutions AS sitt produkt og eiendel, på leie til Norway Cup / Bækkelagets SK. Koden er beskyttet av åndsverkloven og all uautorisert bruk er forbudt.
 let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
 let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
-
 fetch("https://swnevin.github.io/norwaycup_assets/extensions.js")
   .then(response => response.text())
-  .then(script => eval(script))
+  .then(script => {
+    eval(script);
+    window.FormExtension = FormExtension; // Gjør FormExtension tilgjengelig globalt
+  })
   .then(() => {
-    console.log("Extensions.js lastet inn.");
+    console.log("Extensions.js lastet inn og FormExtension er tilgjengelig.");
     
     // Last inn Voiceflow-widget
     let script = document.createElement("script");
@@ -17,7 +19,7 @@ fetch("https://swnevin.github.io/norwaycup_assets/extensions.js")
         versionID: 'production',
         allowDangerousHTML: true,
         assistant: {
-          extensions: [FormExtension],
+          extensions: [window.FormExtension], // Bruk den globale FormExtension
           stylesheet: widgetStyleSheet
         }
       }).then(() => {
