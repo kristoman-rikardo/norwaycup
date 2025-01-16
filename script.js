@@ -35,7 +35,7 @@
     
             input[type="text"], input[type="email"], textarea {
               width: 100%;
-              border: 2px solid #3480c2;
+              border: 2px solid #4AC8DD;
               background-color: #fff;
               color: #333;
               margin: 10px 0;
@@ -55,7 +55,7 @@
             }
     
             .submit {
-              background-color: #3480c2;
+              background-color: #4AC8DD;
               border: none;
               color: white;
               padding: 12px;
