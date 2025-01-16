@@ -1,4 +1,4 @@
-// Dalai Solutions AS eiendom, på leie til Norway Cup / Bækkelagets SK. Koden er beskyttet av åndsverkloven og uatorisert bruk er strengt forbudt. 
+// Dette Dalai Solutions AS eiendom, på leie til Norway Cup / Bækkelagets SK. Bruk utover avtale er ikke tillat.
     
     let proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
     let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
