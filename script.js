@@ -122,7 +122,7 @@
       },
     };
     
-    // Last inn Voiceflow-widget
+    // Last inn Chat-widget
     let script = document.createElement("script");
     script.onload = function() {
       window.voiceflow.chat.load({
