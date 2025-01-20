@@ -5,7 +5,7 @@ let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
 let widgetDescription = " ";
 let browserUrl = window.location.href;
 
- if (browserUrl.includes('/sprak=3')) {
+ if (browserUrl.includes('/?sprak=3')) {
 widgetDescription = "I'm pretty smart, so just ask! Don't share any sensitive personal information with me.";
 proactiveMessage = "I'm happy to help!👋";
 } else if (browserUrl.includes('/?sprak=1')) {
