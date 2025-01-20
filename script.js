@@ -45,7 +45,7 @@ const FormExtension = {
           }
           input[type="text"], input[type="email"], textarea {
             width: 100%;
-            border: 2px solid #2C7E7C;
+            border: 2px solid #4AC8DD;
             background-color: #fff;
             color: #333;
             margin: 10px 0;
@@ -60,7 +60,7 @@ const FormExtension = {
             height: 100px;
           }
           .submit {
-            background-color: #2C7E7C;
+            background-color: #4AC8DD;
             border: none;
             color: white;
             padding: 12px;
