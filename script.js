@@ -1,6 +1,5 @@
 // Dette er Dalai Solutions AS sin eiendom, på leie til Norway Cup / Bækkelagets SK. Bruk utover avtale er ikke tillat.    
-let proactiveMessage = " ";
-let widgetStyleSheet = "https://swnevin.github.io/norwaycup_assets/styles.css";
+let inputPlaceholder = " ";
 let widgetDescription = " ";
 let browserUrl = window.location.href;
 let browser_url = window.location.href;
@@ -8,13 +7,13 @@ let browser_url = window.location.href;
 
  if (browserUrl.includes('/?sprak=3')) {
 widgetDescription = "I'm pretty smart, so just ask! Don't share any sensitive personal information with me.";
-proactiveMessage = "I'm happy to help!👋";
+inputPlaceholder = "Message...";
 } else if (browserUrl.includes('/?sprak=1')) {
 widgetDescription = "Jeg er ganske smart, så bare spør! Ikke gi meg sensitiv personinformasjon.";
-proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
+inputPlaceholder = "Skriv melding...";
 } else {
 widgetDescription = "Jeg er ganske smart, så bare spør! Ikke gi meg sensitiv personinformasjon.";
-proactiveMessage = "Hei, jeg hjelper deg gjerne!👋";
+inputPlaceholder = "Skriv melding...";
 }
 
 // Definer FormExtension
@@ -157,7 +156,6 @@ const FormExtension = {
     },
   };  
 // Last inn Chat-widget
-let script = document.createElement("script");
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
@@ -165,14 +163,15 @@ let script = document.createElement("script");
           verify: { projectID: '67436de76414aa7986e35112' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          assistant:  {
+          type: 'chat', // Type of assistant
+          renderMode: 'widget', // Render mode
+          banner: {
             description: widgetDescription,
-            extensions: [FormExtension]
           },
-          launch: {
-            event: { type: "launch", payload: { browser_url: window.location.href } }
-      }
+          inputPlaceholder: inputPlaceholder // Placeholder text for input field
         });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
   })(document, 'script');
