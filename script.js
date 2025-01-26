@@ -164,11 +164,12 @@ const FormExtension = {
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
           assistant: {
+             extensions: FormExtension,
              banner: {
                description: widgetDescription,
-             },
+                     },
              inputPlaceholder: inputPlaceholder
-           },
+                   },
          launch: {
             event: { type: "launch", payload: { browser_url: window.location.href } }
       }
