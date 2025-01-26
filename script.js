@@ -163,12 +163,12 @@ const FormExtension = {
           verify: { projectID: '67436de76414aa7986e35112' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
-          type: 'chat', // Type of assistant
-          renderMode: 'widget', // Render mode
-          banner: {
-            description: widgetDescription,
-          },
-          inputPlaceholder: inputPlaceholder // Placeholder text for input field
+          assistant: {
+             banner: {
+               description: widgetDescription,
+             },
+             inputPlaceholder: inputPlaceholder
+           }
         });
       };
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
