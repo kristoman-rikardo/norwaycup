@@ -168,7 +168,10 @@ const FormExtension = {
                description: widgetDescription,
              },
              inputPlaceholder: inputPlaceholder
-           }
+           },
+         launch: {
+            event: { type: "launch", payload: { browser_url: window.location.href } }
+      }
         });
       };
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
