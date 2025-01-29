@@ -164,6 +164,9 @@ let script = document.createElement("script");
             banner: { description: widgetDescription },
             inputPlaceholder: inputPlaceholder
         },
+        launch: {
+            event: { type: "launch", payload: { browser_url: window.location.href } }
+        }
       });
     }
     v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
