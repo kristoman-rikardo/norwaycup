@@ -1,5 +1,5 @@
 // Dette er Dalai Solutions AS sin eiendom, på leie til Norway Cup / Bækkelagets SK. Bruk utover avtale er ikke tillat.    
-let inputPlaceholder = " ";
+let input_Placeholder = " ";
 let widgetDescription = " ";
 let browserUrl = window.location.href;
 let browser_url = window.location.href;
@@ -7,13 +7,13 @@ let browser_url = window.location.href;
 
  if (browserUrl.includes('/?sprak=3')) {
 widgetDescription = "I'm pretty smart, so just ask! Don't share any sensitive personal information with me.";
-inputPlaceholder = "Message...";
+input_Placeholder = "Message...";
 } else if (browserUrl.includes('/?sprak=1')) {
 widgetDescription = "Jeg er ganske smart, så bare spør! Ikke gi meg sensitiv personinformasjon.";
-inputPlaceholder = "Skriv melding...";
+input_Placeholder = "Skriv melding...";
 } else {
 widgetDescription = "Jeg er ganske smart, så bare spør! Ikke gi meg sensitiv personinformasjon.";
-inputPlaceholder = "Skriv melding...";
+input_Placeholder = "Skriv melding...";
 }
 
 // Definer FormExtension
@@ -168,7 +168,7 @@ const FormExtension = {
              banner: {
                description: widgetDescription,
                      },
-             inputPlaceholder: inputPlaceholder
+             inputPlaceholder: input_Placeholder
                    },
          launch: {
             event: { type: "launch", payload: { browser_url: window.location.href } }
