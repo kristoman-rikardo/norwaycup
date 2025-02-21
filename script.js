@@ -24,7 +24,6 @@ let script = document.createElement("script");
         url: 'https://general-runtime.voiceflow.com',
         versionID: 'production',
         assistant: {
-            extensions: [FormExtension],
             banner: { description: widgetDescription },
             inputPlaceholder: inputPlaceholder,
             stylesheet: widgetStylesheet
