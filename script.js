@@ -1,6 +1,7 @@
 // Dette er Dalai Solutions AS sin eiendom, på leie til Bækkelaget Sportsklub / Norway Cup. Bruk utover avtale er ikke tillat.    
 let widgetDescription = " ";
 let inputPlaceholder = " ";
+let widgetStylesheet = " ";
 let browser_url = window.location.href;
 
  if (browser_url.includes('/?sprak=3')) {
