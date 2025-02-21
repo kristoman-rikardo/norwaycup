@@ -156,7 +156,7 @@ let script = document.createElement("script");
     var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
     v.onload = function() {
       window.voiceflow.chat.load({
-        verify: { projectID: '67436de76414aa7986e35112' },
+        verify: { projectID: '67b8590ef2a0a0c3b286de3d' },
         url: 'https://general-runtime.voiceflow.com',
         versionID: 'production',
         assistant: {
